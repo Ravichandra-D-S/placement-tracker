@@ -21,4 +21,18 @@ It helps students track coding problems, progress, and placement preparation in 
 - HTML
 - CSS
 - SQLite
-- JavaScript 
+- JavaScript
+
+## 📂 Project Structure
+daytracker/
+app.py
+problems.py
+database.db
+data.json
+templates/
+index.html
+login.html
+graph.html
+static/
+style.css
+requirements.txt
