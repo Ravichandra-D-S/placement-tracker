@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: auto;
+    background: #ddd;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 100%;
+    background: green;
+    border-radius: 10px;
+}
+
+form, .login-box {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    background: #ff4b2b;
+    color: white;
+    border: none;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+.graph-image {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+@media(max-width: 600px){
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+}

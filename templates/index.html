@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracker Pro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🚀 Placement Tracker Pro</h1>
+
+<a href="/graph">📈 View Graph</a> |
+<a href="/logout">Logout</a>
+
+<div class="dashboard">
+    <div class="card">Days: {{total_days}}</div>
+    <div class="card">Accuracy: {{avg_accuracy}}%</div>
+    <div class="card">Progress: {{progress}}%</div>
+</div>
+
+<div class="progress-bar">
+    <div class="progress" style="width: {{progress}}%"></div>
+</div>
+
+<h2>Day {{day}}</h2>
+<p><b>Today's Topic:</b> {{plan}}</p>
+
+<h3>Today's Questions</h3>
+<ul>
+{% for q in questions %}
+<li><a href="{{q.link}}" target="_blank">{{q.q}}</a></li>
+{% endfor %}
+</ul>
+
+<form method="POST">
+    <input type="hidden" name="day" value="{{day}}">
+    <input type="text" name="topic" placeholder="Topic" required>
+    <input type="number" name="problems" placeholder="Problems done" required>
+    <input type="number" name="accuracy" placeholder="Accuracy %" required>
+    <input type="text" name="weak" placeholder="Weak area" required>
+    <button type="submit">Save Progress</button>
+</form>
+
+<table>
+<tr>
+    <th>Day</th>
+    <th>Topic</th>
+    <th>Problems</th>
+    <th>Accuracy</th>
+    <th>Status</th>
+    <th>Weak Area</th>
+</tr>
+
+{% for entry in data %}
+<tr>
+    <td>{{entry.day}}</td>
+    <td>{{entry.topic}}</td>
+    <td>{{entry.problems_done}}</td>
+    <td>{{entry.accuracy}}%</td>
+    <td>{{entry.status}}</td>
+    <td>{{entry.weak_area}}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
